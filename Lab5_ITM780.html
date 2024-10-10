@@ -1,9 +1,0 @@
-<!-- HTML (index.html) -->
-<button id="nameButton">Enter your name</button>
-<p id="nameDisplay"></p>
-
-<!-- JS (script.js) -->
-document.getElementById("nameButton").addEventListener("click", function() {
-    const name = prompt("Please enter your name:");
-    document.getElementById("nameDisplay").textContent = "Hello, " + name + "!";
-});

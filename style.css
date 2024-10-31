@@ -1,21 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12pt;
     color: #333333;
-    background-color: #efe1e7;
-    margin: 14;
+    background-color: #f4f7f6;
+    margin: 0;
     padding: 20px;
 }
 
+/* Profile Image Adjustments */
 .container {
+    flex-direction: column;
     text-align: center;
     margin: 0 auto;
-    max-width: 900px;   
+    max-width: 900px; 
+    padding: 20px; 
 }
 
 header h1{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    color: #2c3e50;
+    color: #333;
     font-size: 36px;
     margin-bottom: 10px;
 }
@@ -26,21 +30,163 @@ header p{
     color: #555
 }
 
-#profileImage {
-    max-width: 100%; 
-    width: 70px; 
-    height: auto; 
-    transition: transform 0.5s;
+form label {
+    display: block;
+    font-size: 12pt;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: bold;
 }
 
-h2 {
-    color: #8797de;
+/* General Styling for Form */
+#surveyForm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 14pt;
+    color: #333;
+}
+
+/* Form Header */
+#surveyForm h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 28px;
-    border-bottom: 2px solid #8797de;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+/* Label Styling */
+#surveyForm label {
+    display: block;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Input and Select Styling */
+#surveyForm input[type="text"],
+#surveyForm input[type="email"],
+#surveyForm input[type="number"],
+#surveyForm textarea,
+#surveyForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14pt;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+#surveyForm input[type="text"]:focus,
+#surveyForm input[type="email"]:focus,
+#surveyForm input[type="number"]:focus,
+#surveyForm textarea:focus,
+#surveyForm select:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Radio and Checkbox Styling */
+#surveyForm input[type="radio"],
+#surveyForm input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Slightly larger checkboxes/radios */
+}
+
+#surveyForm label[for="smartphone"],
+#surveyForm label[for="laptop"],
+#surveyForm label[for="tablet"],
+#surveyForm label[for="comfortable1"],
+#surveyForm label[for="comfortable2"],
+#surveyForm label[for="comfortable3"],
+#surveyForm label[for="comfortable4"],
+#surveyForm label[for="chatFrequency1"],
+#surveyForm label[for="chatFrequency2"],
+#surveyForm label[for="chatFrequency3"],
+#surveyForm label[for="chatFrequency4"] {
+    margin-right: 20px;
+}
+
+/* Color Picker */
+#surveyForm input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Submit and Clear Buttons */
+#surveyForm button[type="button"],
+#surveyForm button[type="reset"] {
+    padding: 12px 20px;
+    margin-top: 20px;
+    font-size: 14pt;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles how the Submit button will look */
+#surveyForm button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Styles how the Submit button will look like when the mouse hovers over it */
+#surveyForm button[type="button"]:hover {
+    background-color: #21618c;
+}
+
+/* Styles how the Clear button will look */
+#surveyForm button[type="reset"] {
+    background-color: #e74c3c;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Styles how the Clear button will look when the mouse hovers over it */
+#surveyForm button[type="reset"]:hover {
+    background-color: #21618c;
+}
+
+
+/* Profile Image styling*/
+#profileImage {
+    max-width: 100%;
+    width: 700x;
+    height: auto;
+    transition: transform 0.5s; 
+}
+#img1 {
+    transition: width 0.5s ease; 
+    border-radius: 50%;
+}
+
+/* Main Heading styling */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-size: 28px;
+    border-bottom: 2px solid #2c3e50;
     padding-bottom: 10px;
     margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Subheading Styling */
 h3 {
     color: #2c3e50;
     font-size: 20px;
@@ -51,12 +197,14 @@ p {
     font-size: 14pt;
     color: #2c3e50;
     line-height: 1.6;
+    margin-bottom: 10px;
 }
 
 ul {
     color: #2c3e50;
     padding-left: 20px;
     font-size: 14pt;
+    list-style-type: none;
 }
 
 a {
@@ -66,7 +214,7 @@ a {
 
 
 a:hover{
-    color:#5e4409;
+    color:#333;
     text-decoration: underline;
 }
 
@@ -75,6 +223,7 @@ a:active {
     text-decoration: underline;
 }
 
+/* Link Table Styling */
 table {
     width: 100%;
     border-collapse:collapse;
@@ -88,29 +237,19 @@ th, td {
 }
 
 th {
-    background-color: #efe1e7;
-    color: rgb(87, 76, 76);
+    background-color: #f4f7f6;
+    color: rgb(12, 26, 47);
     font-weight: bold;
 }
 
 td {
-    background-color:#efe1e7;
+    background-color:#f4f7f6;
 }
 
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #0a0707;
-    font-size: 14px;
-}
-
-#img1 {
-    transition: width 0.5s ease; 
-}
-
+/* Styling for Submit, Clear and Enter Name Buttons */
 button {
     padding: 10px 20px;
-    background-color: #2c3e50;
+    background-color: #e74c3c;
     color: white;
     border: none;
     cursor: pointer;
@@ -119,18 +258,11 @@ button {
 }
 
 button:hover {
-    background-color: #eeebe5;
-    color: #2c3e50;
+    background-color: #c0392b;
+    color: #eeee;
 }
 
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #2c3e50;
-}
-
+/* Center the navigation and its elements */
 .center-container {
     display: flex;
     flex-direction: column;
@@ -138,6 +270,23 @@ nav ul {
     justify-content: center;
     text-align: center;
     margin: 20px 0;
+}
+
+/* Navigation Bar Styling */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #34495e;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -181,6 +330,14 @@ nav ul li:hover {
 
 nav ul li a:hover {
     color: #2c3e50;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #f1faee;
+    font-size: 14px;
 }
 
 @media (max-width: 600px) {

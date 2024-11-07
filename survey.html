@@ -3,18 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Vanessa Payoyo</title>
+    <title>Contact - Vanessa Payoyo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Center the form */
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        form {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav>
+        <a href="index.html" class="logo-link"></a>
+        <img src="VPLogo.png" alt="Vanessa Payoyo Logo" class="logo">
+    </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="experience.html">Experience</a></li>
-            <li><a href="survey.html">User Survey</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Profiles</a>
                 <ul class="dropdown-content">
@@ -26,88 +51,70 @@
     </nav>
 
     <section>
-        <h2>User Survey Form</h2>
-        <form id="surveyForm" onsubmit="submitForm(); return false;">
+        <form id="contactForm" onsubmit="submitForm(); return false;">
+            <h2>Contact Form</h2>
             <!-- Form Fields -->
-            <label for="ageGroup">Which age group do you belong to?</label><br>
-            <select id="ageGroup" name="ageGroup" required>
-                <option value="18-24">18-24</option>
-                <option value="25-34">25-34</option>
-                <option value="35-44">35-44</option>
-                <option value="45+">45+</option>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="areaOfInterest">Area of Interest</label><br>
+            <select id="areaOfInterest" name="areaOfInterest" required>
+                <option value="Data Analyst">Data Analyst</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Other">Other</option>
             </select><br><br>
 
-            <!-- Device Radio Buttons -->
-            <label>Which devices are your primary tool for browsing the web?</label><br>
-            <input type="radio" id="smartphone" name="device" value="Smartphone" required>
-            <label for="smartphone">Smartphone</label>
-            <input type="radio" id="laptop" name="device" value="Laptop" required>
-            <label for="laptop">Laptop</label>
-            <input type="radio" id="tablet" name="device" value="Tablet" required>
-            <label for="tablet">Tablet</label><br><br>
-
-            <!-- Additional Fields -->
-            <label>Do you believe that having a personal website impacts hiring decisions? Explain in detail</label><br>
-            <textarea id="hiringImpact" name="hiringImpact" required></textarea><br><br>
-
-            <label for="socialMedia">Which social media platform do you mostly use?</label><br>
-            <select id="socialMedia" name="socialMedia" required>
-                <option value="Instagram">Instagram</option>
-                <option value="LinkedIn">LinkedIn</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Twitter">Twitter</option>
+            <label for="reasonForContact">Reason for Contact</label><br>
+            <select id="reasonForContact" name="reasonForContact" required>
+                <option value="Inquiry">Inquiry</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Other">Other</option>
             </select><br><br>
 
-            <!-- Comfort Level Radio Buttons -->
-            <label>Comfort Level with Online Transactions:</label><br>
-            <input type="radio" id="comfortable1" name="comfortLevel" value="1" required>
-            <label for="comfortable1">1 (Not Comfortable)</label>
-            <input type="radio" id="comfortable2" name="comfortLevel" value="2" required>
-            <label for="comfortable2">2</label>
-            <input type="radio" id="comfortable3" name="comfortLevel" value="3" required>
-            <label for="comfortable3">3</label>
-            <input type="radio" id="comfortable4" name="comfortLevel" value="4" required>
-            <label for="comfortable4">4 (Very Comfortable)</label><br><br>
+            <label for="referral">How did you hear about me?</label><br>
+            <input type="text" id="referral" name="referral"><br><br>
 
-            <!-- Chat Frequency Radio Buttons -->
-            <label>How frequently do you use online chat features?</label><br>
-            <input type="radio" id="chatFrequency1" name="chatFrequency" value="Never" required>
-            <label for="chatFrequency1">Never</label>
-            <input type="radio" id="chatFrequency2" name="chatFrequency" value="Rarely" required>
-            <label for="chatFrequency2">Rarely</label>
-            <input type="radio" id="chatFrequency3" name="chatFrequency" value="Sometimes" required>
-            <label for="chatFrequency3">Sometimes</label>
-            <input type="radio" id="chatFrequency4" name="chatFrequency" value="Often" required>
-            <label for="chatFrequency4">Often</label><br><br>
+            <label>Preferred Contact Time</label><br>
+            <div class="checkbox-group">
+                <input type="checkbox" id="morning" name="preferredTime" value="Morning">
+                <label for="morning">Morning</label>
 
-            <!-- Other Fields -->
-            <label for="favoriteFeature">Favorite features of web portfolios:</label><br>
-            <textarea id="favoriteFeature" name="favoriteFeature" required></textarea><br><br>
+                <input type="checkbox" id="afternoon" name="preferredTime" value="Afternoon">
+                <label for="afternoon">Afternoon</label>
 
-            <label for="leastFavoriteFeature">Least favorite features of web portfolios:</label><br>
-            <textarea id="leastFavoriteFeature" name="leastFavoriteFeature" required></textarea><br><br>
+                <input type="checkbox" id="night" name="preferredTime" value="Night">
+                <label for="night">Night</label>
+            </div><br>
 
-            <label for="favcolor">Pick your favorite color:</label>
-            <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+            <label>Preferred Contact Method</label><br>
+            <div class="radio-group">
+                <input type="radio" id="emailMethod" name="contactMethod" value="Email" required>
+                <label for="emailMethod">Email</label>
 
-            <label>Content Preference:</label><br>
-            <input type="checkbox" id="feature1" name="features" value="Blog Posts">
-            <label for="feature1">Blog Posts</label><br>
-            <input type="checkbox" id="feature2" name="features" value="Video Tutorials">
-            <label for="feature2">Video Tutorials</label><br>
-            <input type="checkbox" id="feature3" name="features" value="Infographics">
-            <label for="feature3">Infographics</label><br>
-            <input type="checkbox" id="feature4" name="features" value="Case Studies">
-            <label for="feature4">Case Studies</label><br><br>
+                <input type="radio" id="phoneMethod" name="contactMethod" value="Phone Number" required>
+                <label for="phoneMethod">Phone Number</label>
+            </div><br>
+
+            <label for="subscribeNewsletter">Subscribe to Newsletter</label><br>
+            <input type="checkbox" id="subscribeNewsletter" name="subscribeNewsletter" value="Yes">
+            <label for="subscribeNewsletter">Yes, sign me up!</label><br><br>
+
+            <label for="message">Question (Message)</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
 
             <!-- Submit and Clear Buttons -->
             <button type="button" onclick="submitForm()">Submit</button>
             <button type="button" onclick="clearForm()">Clear</button>
         </form>
-
-        <footer>
-            <p>© 2024 Vanessa Payoyo. All Rights Reserved.</p>
-        </footer>
     </section>
 
     <!-- JavaScript File -->

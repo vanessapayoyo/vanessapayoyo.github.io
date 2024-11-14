@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", intital-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <script src="form.js" defer></script>
 </head>
 
+<body>
+
 <!--Navigation Bar-->
 <nav>
-    <a href="index.html" class="logo-link"></a>
+    <a href="index.html" class="logo-link">
         <img src="VPLogo.png" alt="Vanessa Payoyo Logo" class="logo">
     </a>
-    <ul> <!--Linking the files shown in the Navigation Bar-->
+    <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
@@ -26,36 +28,79 @@
                 <li><a href="https://github.com/vanessapayoyo/vanessapayoyo.github.io" target="_blank">GitHub</a></li>
             </ul>
         </li>
-            </ul> 
-        </li>
     </ul>
 </nav>
 
-<!--Heading for my Homepage-->
-<body>
-    <header>
-        <h1>Vanessa Payoyo</h1>
-        <p>Personal Portfolio</p>
-    </header>
+<!-- Heading for Homepage -->
+<header>
+    <h1>Vanessa Payoyo</h1>
+    <p>Personal Portfolio</p>
+</header>
 
-    <div class="center-container">
-        <button id="nameButton">Enter Name</button>
-        <p id="nameDisplay"></p>
-    </div>
+<div class="center-container">
+    <button id="nameButton">Enter Name</button>
+    <p id="nameDisplay"></p>
+</div>
 
-    <!--Profile image adjustments-->
-    <section>
-        <div class="container" style="text-align: center; margin-top: 2em;">
-            <img src="profileimage.JPEG" alt="Profile Image"
-                id="img1" onclick="toggleImgSize()" style="cursor: pointer; width: 40%; height: auto;">
-        </div>
+<div class="media-container">
+    <audio controls>
+        <source src="Butterfly.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <button class="citation-button" onclick="toggleCitation()">Show Citation</button>
+    <p class="audio-citation" style="display: none;">BTS. (2015). <em>Butterfly</em> [MP3]. SoundCloud. https://soundcloud.com/lesly-lee-57443177/butterfly</p>
+</div>
+
+<section class="accessibility-container">
+    <!-- Text Size Button -->
+    <button class="accessibility-button" onclick="toggleTextSize()">Change Text Size</button>
     
-    </section>
-     
-    <footer>
-        <p>© 2024 Vanessa Payoyo. All Rights Reserved.</p>
-    </footer>
+    <!-- Background/Color Change Button -->
+    <button class="accessibility-button" onclick="toggleColorScheme()">Change Background Colour</button>
+</section>
 
+
+<!-- Profile image adjustments -->
+<section>
+    <div class="container" style="text-align: center; margin-top: 2em;">
+        <img src="profileimage.JPEG" alt="Profile Image" id="img1" onclick="toggleImgSize()" style="cursor: pointer; width: 40%; height: auto;">
+    </div>
+</section>
+
+<section>
+    <!-- Alt Text Button and Images -->
+    <div class="image-accessibility">
+        
+        <!-- First Image Block -->
+        <div class="image-item">
+            <img src="CNE.jpeg" alt="A nighttime shot of the towering white Ferris wheel at the CNE, glowing against the dark sky." class="gallery-image">
+            <figcaption class="caption">Taken on August 23rd, 2023 at the CNE - Toronto, Ontario</figcaption>
+            <button class="description-button" onclick="toggleAltText(this)">Description</button>
+            <p class="alt-text" style="display: none;">A nighttime shot of the towering white Ferris wheel at the CNE, glowing against the dark sky.</p>
+        </div>
+
+        <!-- Second Image Block -->
+        <div class="image-item">
+            <img src="VACATION.JPG" alt="A scenic view from a mountain-top restaurant in El Salvador, where the ocean waves crash below." class="gallery-image">
+            <figcaption class="caption">Taken on June 14th, 2024 at Decameron - San Salvador, El Salvador</figcaption>
+            <button class="description-button" onclick="toggleAltText(this)">Description</button>
+            <p class="alt-text" style="display: none;">A scenic view from a mountain-top restaurant in El Salvador, where the ocean waves crash below.</p>
+        </div>
+
+        <!-- Third Image Block -->
+        <div class="image-item">
+            <img src="CONCERT.jpeg" alt="An unforgettable concert with standout performances from PartyNextDoor and Drake" class="gallery-image">
+            <figcaption class="caption">Taken on August 2nd, 2024 at Budweiser Stage - Toronto, Ontario</figcaption>
+            <button class="description-button" onclick="toggleAltText(this)">Description</button>
+            <p class="alt-text" style="display: none;">An unforgettable concert with standout performances from PartyNextDoor and Drake</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Vanessa Payoyo. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>

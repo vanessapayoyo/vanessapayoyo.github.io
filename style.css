@@ -441,3 +441,17 @@ td {
         padding: 10px;
     }
 }
+
+/* Logo Styling*/
+i {
+    font-size: 24px;
+    color: #E4405F; /* Instagram's primary color */
+    margin-right: 8px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: #C13584; /* Instagram hover color */
+}

@@ -1,84 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Education - Vanessa Payoyo</title>
-<link rel="stylesheet" href="style.css">
-
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <title>Education - Vanessa Payoyo</title>
 </head>
 
-<!--Navigation Bar-->
-<nav>
-    <a href="index.html" class="logo-link"></a>
-        <img src="VPLogo.png" alt="Vanessa Payoyo Logo" class="logo">
-    </a>
-    <ul><!--Links to the Files for the Navigation Bar-->
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="survey.html">Contact</a></li>
-        <li><a href="techniques.html">Techniques</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Profiles</a>
-            <ul class="dropdown-content">
-                <li><a href="https://ca.linkedin.com/in/vanessa-payoyo" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/vanessapayoyo/vanessapayoyo.github.io" target="_blank">GitHub</a></li>
-            </ul>
-        </li>
-            </ul> 
-        </li>
-    </ul>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+   <div class="container">
+       <a class="navbar-brand fw-bold" href="index.html">
+           <img src="P2.png" alt="Vanessa Logo" style="height: 40px;" class="me-2">
+           <img src="name.png" alt="Vanessa Logo" style="height: 20px;" class="me-2">
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav ms-auto">
+               <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+               <li class="nav-item"><a class="nav-link active" href="education.html">Education</a></li>
+               <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+               <li class="nav-item"><a class="nav-link" href="survey.html">Contact</a></li>
+           </ul>
+       </div>
+   </div>
 </nav>
 
-<!--Education sections with its corresponding details and necessary links-->
-<section>
-    <h2>Education</h2>
+<!-- Education Section -->
+<section class="about-section">
+    <div class="container my-5">
+        <h2 class="text-center fw-bold mb-4">Education</h2>
+        <div class="row justify-content-center">
+            <!-- University -->
+            <div class="col-md-8">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="tmulogo(1).png" alt="University Logo" class="img-fluid">
+                    </div>
+                    <div class="education-content">
+                        <h3 class="fw-bold">Toronto Metropolitan University - BComm (Honours)</h3>
+                        <p class="text-muted">September 2022 to May 2026</p>
+                        <p>Enrolled in the Business Technology Management Program. Courses include:</p>
+                        <ul>
+                            <li>Web Design and Management</li>
+                            <li>Cloud Computing</li>
+                            <li>SQL and Python</li>
+                            <li>Business Intelligence and Analytics</li>
+                            <li>Business Process Management and Marketing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Google Cybersecurity Certificate -->
+            <div class="col-md-8">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="GoogleCybLogo.png" alt="Google Cybersecurity Certificate Logo" class="img-fluid">
+                    </div>
+                    <div class="education-content">
+                        <h3 class="fw-bold">Google Cybersecurity Certificate</h3>
+                        <p class="text-muted">June 2024 to October 2024</p>
+                        <ul>
+                            <li>Foundational knowledge in cybersecurity principles</li>
+                            <li>Practical skills in encryption, risk assessment, and vulnerability management</li>
+                            <li>Hands-on labs and projects demonstrating real-world cybersecurity proficiency</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- High School -->
+            <div class="col-md-8">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="MPJlogo.png" alt="High School Logo" class="img-fluid">
+                    </div>
+                    <div class="education-content">
+                        <h3 class="fw-bold">Monsignor Percy Johnson Secondary School</h3>
+                        <p class="text-muted">September 2018 to June 2022</p>
+                        <ul>
+                            <li>Ontario Scholar (2022)</li>
+                            <li>Honour Roll (all four years)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <h3>Monsignor Percy Johnson Secondary School</h3>
-    <p> September 2018 to June 2022</p>
-    <li>Ontario Scholar (2022)</li>
-    <li>Honour Roll (All four years)</li>
-    <ul>
-        <li><a href="https://www.tcdsb.org/msgrpercyjohnson" target="_blank">Monsignor Percy Johnson Catholic Secondary School</a></li>
-    </ul>
 
-    <h3>Toronto Metropolitan University - BComm (Honours)</h3>
-    <p> September 2022 to May 2026</p>
-    <li>Enrolled in the Business Technology Management Program at the Ted Rogers School of Management</li>
-    <li>Includes courses entailing Web Design and Management, Cloud Computing, SQL, Python, Business Intelligence and Analytics, Business Process Management and Marketing
-    </li>
+ <!-- Helpful Courses Section -->
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Courses</h2>
     
+    <div class="row g-4">
+        <!-- Course 1 -->
+        <div class="col-md-6">
+            <div class="card shadow rounded-4">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">ITM 500: Data and Information Management</h4>
+                    <p class="card-text">
+                        This course pertains to relational database management and advanced SQL querying, equipping students with skills to manage and analyze data
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <h3>Google Cybersecurity Certificate</h3>
-    <p> June 2024 to October 2024</p>
-    <li>Gained foundational knowledge in cybersecurity principles, including network security, incident response, and threat analysis</li>
-    <li>Developed practical skills in security tools and techniques, such as encryption, risk assessment, and vulnerability management</li>
-    <li>Completed hands-on labs and projects that demonstrated proficiency in identifying and mitigating cyber threats in real-world scenarios.</li>
-</section>
+        <!-- Course 2 -->
+        <div class="col-md-6">
+            <div class="card shadow rounded-4">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">ITM 200: Fundamentals of Programming</h4>
+                    <p class="card-text">
+                        Covers object-oriented programming in business, emphasizing Python for logic, modularity, testing, debugging, control structures and file handling.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-<section>
-    <h2>Program: Business Technology Management</h2>
+        <!-- Course 3 -->
+        <div class="col-md-6">
+            <div class="card shadow rounded-4">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">ITM 780: Web Design and Management</h4>
+                    <p class="card-text">
+                        Teaches web design and management using HTML5, CSS3, and best practices, focusing on creating, publishing, and maintaining effective business websites.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    <p>I am enrolled in Business Technology Management. This program entails essential analytical and problem-solving skills that enables individuals to 
-        develop innovative business solutions using Information and Communication Technologies. Its greatest aspect is its flexibility, allowing students 
-        to align their education with their business interests, preparing them for a variety of roles in business and management while focusing on the growing 
-        demand for professionals who can levrage ICT to drive business strategies.</p>
-</section>
+        <!-- Course 4 -->
+        <div class="col-md-6">
+            <div class="card shadow rounded-4">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">MKT 100: Principles of Marketing</h4>
+                    <p class="card-text">
+                        Introduces marketing principles, metrics, and strategies, emphasizing ethical decision-making, market analysis, and IT tools for implementing marketing plans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<section>
-    
-    <h2>ITM 500</h2> 
-
-    <p>The course I find most useful was ITM500 as it helped me develop essential skills in relational database management and advanced SQL querying, enabling me 
-        to effectively analyze and manage data, which is vital for making informed business decisions.</p>
-</section>
-
-
-
+<!-- Footer -->
 <footer>
-    <p>© 2024 Vanessa Payoyo. All Rights Reserved.</p>
+    <p>© 2024 Vanessa Payoyo. Personal Portfolio.</p>
 </footer>
 
 </body>
 </html>
+

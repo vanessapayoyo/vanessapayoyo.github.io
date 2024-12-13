@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Lab</title>
+    <link rel="stylesheet" href="lab8.css">
+    <script src="lab8.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Vanessa Payoyo</h1>
+    </header>
+    <main>
+        <section class="audio-section">
+            <h2>Audio</h2>
+            <audio controls>
+                <source src="Butterfly.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption>Audio from SoundCloud: Butterfly by BTS. Retrieved on November 12, hosted on SoundCloud.</figcaption>
+        </section>
+
+        
+            <section class="accessibility-buttons">
+                <h2>Accessibility Components</h2>
+                <div class="buttons">
+                    <button onclick="resizeText('small')">Small Text</button>
+                    <button onclick="resizeText('large')">Large Text</button>
+                    <button onclick="toggleColorBlindMode()">Toggle Colorblind Mode</button>
+                </div>
+            </section>
+
+            <section>
+   
+    <div class="image-container">
+        <div class="image-box">
+            <img id="image1" src="CNE.jpeg" alt="A scenic summer view of the CNE ferris wheel at night">
+            <button onclick="showDescription('desc1')">Show Description</button>
+            <p id="desc1" class="description">A scenic summer view of the CNE ferris wheel at night.</p>
+            <figcaption>Image taken on August 15, 2024, at the Canadian National Exhibition, Toronto, Canada.</figcaption>
+        </div>
+        <div class="image-box">
+            <img id="image2" src="CONCERT.jpeg" alt="A concert held by PartyNextDoor and Drake at Budweiser Stage">
+            <button onclick="showDescription('desc2')">Show Description</button>
+            <p id="desc2" class="description">A concert held by PartyNextDoor and Drake at Budweiser Stage.</p>
+            <figcaption>Image taken on August 4, 2024, at Budweiser Stage, Toronto, Canada.</figcaption>
+        </div>
+        <div class="image-box">
+            <img id="image3" src="VACATION.JPG" alt="A breathtaking view from a restaurant on the mountain side in El Salvador">
+            <button onclick="showDescription('desc3')">Show Description</button>
+            <p id="desc3" class="description">A breathtaking view from a restaurant on the mountain side in El Salvador.</p>
+            <figcaption>Image taken on May 12, 2024, at La Montaña Restaurant, El Salvador.</figcaption>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 by Vanessa Payoyo</p>
+    </footer>
+</body>
+</html>
